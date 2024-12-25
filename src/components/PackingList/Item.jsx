@@ -1,8 +1,6 @@
-export default function Item({ item, onDelete, onCheckboxChange }) {
-  function handleDelete() {
-    onDelete(item.id);
-  }
+import Button from "../Button";
 
+export default function Item({ item, onDelete, onCheckboxChange }) {
   return (
     <li>
       <input
@@ -13,7 +11,8 @@ export default function Item({ item, onDelete, onCheckboxChange }) {
       <span style={item.packed ? { textDecoration: "line-through" } : {}}>
         {item.quantity} {item.name}
       </span>
-      <button onClick={handleDelete}>❌</button>
+
+      <Button onClick={() => onDelete(item.id)} name={"❌"} />
     </li>
   );
 }

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Button from "./Button";
 export default function Form({ handleAddItem }) {
   const [inputValue, setInputValue] = useState("");
   const [selectedValue, setSelectedValue] = useState(1);
@@ -48,7 +49,7 @@ export default function Form({ handleAddItem }) {
               placeholder="Item ..."
               style={{ marginRight: "4px" }}
             />
-            <button>Add</button>
+            <Button name={"ADD"} />
           </div>
         </div>
       </form>

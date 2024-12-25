@@ -1,4 +1,5 @@
 import Swal from "sweetalert2";
+import Button from "../Button";
 export default function SortClear({ handleClear, handleSort }) {
   function handleAlert() {
     Swal.fire({
@@ -31,7 +32,7 @@ export default function SortClear({ handleClear, handleSort }) {
         <option value="description">sort by description</option>
         <option value="packed">sort by packed status</option>
       </select>
-      <button onClick={handleAlert}>CLEAR LIST</button>
+      <Button onClick={handleAlert} name={"CLEAR LIST"} />
     </div>
   );
 }
